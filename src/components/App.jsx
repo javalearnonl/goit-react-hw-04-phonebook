@@ -29,6 +29,7 @@ const App = () => {
       localStorage.setItem('contacts', JSON.stringify(contacts));
     }
   }, [contacts]);
+
   const handleSubmit = (name, number) => {
     const contact = {
       id: nanoid(),
@@ -44,6 +45,7 @@ const App = () => {
       setContacts([contact, ...contacts]);
     }
   };
+
   const handleChange = e => {
     const { value } = e.target;
     setFilter(value);
